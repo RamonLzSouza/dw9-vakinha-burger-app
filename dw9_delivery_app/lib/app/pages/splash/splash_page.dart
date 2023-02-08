@@ -10,37 +10,41 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Splash'),
-      ),
-      body: Column(
-        children: [
-          Container(),
-          DeliveryButton(
-            width: 200,
-            height: 200,
-            label: Env.i['backend_base_url'] ?? '',
-            onPressed: () {},
-          ),
-          Text(context.screenWidth.toString()),
-          Row(
-            children: [
-              Container(
-                color: Colors.red,
-                width: context.percentWith(.6),
-                height: 200,
+      body: ColoredBox(
+        color: const Color(0XFF140E0E),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: SizedBox(
+                width: context.screenWidth,
+                child: Image.asset(
+                  'assets/images/lanche.png',
+                  fit: BoxFit.cover,
+                ),
               ),
-              Container(
-                color: Colors.blue,
-                width: context.percentWith(.4),
-                height: 200,
+            ),
+            Center(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: context.percentHeight(.30),
+                  ),
+                  Image.asset('assets/images/logo.png'),
+                  const SizedBox(
+                    height: 80,
+                  ),
+                  DeliveryButton(
+                    width: context.percentWidth(.6),
+                    height: 35,
+                    label: 'ACESSAR',
+                    onPressed: () {},
+                  ),
+                ],
               ),
-            ],
-          ),
-          TextFormField(
-            decoration: InputDecoration(labelText: 'text'),
-          )
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -11,6 +11,7 @@ class Dw9DeliveryApp extends StatelessWidget {
     return MaterialApp(
       title: 'Vakinha Delivery',
       theme: ThemeConfig.theme,
+      debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const SplashPage(),
       },
