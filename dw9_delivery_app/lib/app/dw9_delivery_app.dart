@@ -1,5 +1,5 @@
 import 'package:dw9_delivery_app/app/core/provider/application_binding.dart';
-import 'package:dw9_delivery_app/app/pages/home/home_router.dart';
+import 'package:dw9_delivery_app/app/pages/home/widgets/home_router.dart';
 import 'package:dw9_delivery_app/app/pages/product_detail/product_detail_router.dart';
 import 'package:dw9_delivery_app/app/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
